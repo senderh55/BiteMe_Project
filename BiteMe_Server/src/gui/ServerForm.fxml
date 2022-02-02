@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="1066.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ServerForm">
+   <children>
+      <AnchorPane prefHeight="619.0" prefWidth="1066.0" style="-fx-background-image:/BiteMe/src/gui/Serverbg2.jpg;">
+         <children>
+            <ImageView fitHeight="639.0" fitWidth="1066.0" opacity="0.71">
+               <image>
+                  <Image url="@Serverbg2.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="102.0" layoutY="227.0" text="IP" />
+            <Label layoutX="96.0" layoutY="274.0" text="Port" />
+            <TextField fx:id="ipTextField" editable="false" layoutX="143.0" layoutY="223.0" prefHeight="25.0" prefWidth="194.0" />
+            <TextField fx:id="portTextField" layoutX="143.0" layoutY="270.0" prefHeight="25.0" prefWidth="194.0" />
+            <Button fx:id="connectButton" layoutX="96.0" layoutY="554.0" mnemonicParsing="false" onAction="#connectServer" prefHeight="51.0" prefWidth="122.0" text="Connect">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="discButton" layoutX="252.0" layoutY="554.0" mnemonicParsing="false" onAction="#disconnectServer" prefHeight="51.0" prefWidth="122.0" text="Disconnect">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Label layoutX="123.0" layoutY="89.0" prefHeight="40.0" prefWidth="105.0" text="Connection Status:" textAlignment="CENTER" />
+            <Label fx:id="serverConStatusLabel" layoutX="260.0" layoutY="94.0" prefHeight="31.0" prefWidth="122.0" text="Disconnected" />
+            <Button fx:id="showClientsButton" layoutX="766.0" layoutY="369.0" mnemonicParsing="false" onAction="#showClients" prefHeight="40.0" prefWidth="87.0" text="Show Clients" />
+            <Text layoutX="184.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Details" textAlignment="CENTER" wrappingWidth="111.0703125">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="151.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connection Details" textAlignment="CENTER" wrappingWidth="154.0703125">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="419.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server UI" textAlignment="CENTER" wrappingWidth="111.0703125">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="serverErrorText" layoutX="145.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="194.0" />
+            <Button fx:id="importUsersButton" layoutX="748.0" layoutY="518.0" mnemonicParsing="false" onAction="#ImportUsers" prefHeight="40.0" prefWidth="122.0" text="Import Users" />
+            <TextArea fx:id="showClientsTextArea" editable="false" layoutX="593.0" layoutY="108.0" prefHeight="241.0" prefWidth="433.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="732.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client Connections" textAlignment="CENTER" wrappingWidth="154.0703125">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Label layoutX="77.0" layoutY="388.0" text="DB Name" />
+            <Label layoutX="60.0" layoutY="435.0" text="DB Username" />
+            <TextField fx:id="dbNameTextField" layoutX="143.0" layoutY="384.0" prefHeight="25.0" prefWidth="194.0" text="biteme_db" />
+            <TextField fx:id="dbUsernameTextField" layoutX="143.0" layoutY="431.0" prefHeight="25.0" prefWidth="194.0" text="root" />
+            <Text layoutX="165.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Database Details" textAlignment="CENTER" wrappingWidth="148.0703125">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="718.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Import External User" textAlignment="CENTER" wrappingWidth="182.0703125">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Label layoutX="62.0" layoutY="482.0" text="DB Password" />
+            <PasswordField fx:id="dbPasswordTextField" layoutX="144.0" layoutY="478.0" prefHeight="25.0" prefWidth="194.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

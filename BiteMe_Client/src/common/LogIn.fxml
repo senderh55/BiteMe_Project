@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="701.0" prefWidth="1122.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="common.LogInForm">
+  <children>
+      <AnchorPane prefHeight="547.0" prefWidth="1122.0">
+         <children>
+            <ImageView fitHeight="701.0" fitWidth="1158.0">
+               <image>
+                  <Image url="@../gui/resources/mainBG.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="304.0" layoutY="159.0" prefHeight="483.0" prefWidth="549.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text layoutX="130.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter Login Details">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="logInButton" layoutX="184.0" layoutY="323.0" mnemonicParsing="false" onAction="#LogIntoAccount" prefHeight="52.0" prefWidth="172.0" style="-fx-background-radius: 10; -fx-background-color: #F9975D;" text="Log In">
+                     <effect>
+                        <DropShadow color="#000000d9" />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="usenameTextField" layoutX="178.0" layoutY="127.0" prefHeight="25.0" prefWidth="191.0" />
+                  <Label layoutX="79.0" layoutY="131.0" text="Username:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+                  <Label layoutX="81.0" layoutY="191.0" text="Password:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+                  <PasswordField fx:id="passwordPasswordField" layoutX="178.0" layoutY="186.0" prefHeight="25.0" prefWidth="191.0" />
+                  <Text fx:id="loginStatusText" fill="#c31212" layoutX="105.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="316.13671875">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font></Text>
+                  <Line endX="165.0" layoutX="231.0" layoutY="62.0" startX="-100.0" />
+               </children>
+            </Pane>
+            <Text layoutX="514.0" layoutY="682.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BiteMe - Project Co" />
+            <Line endX="1041.0" layoutX="115.0" startX="-115.0" strokeWidth="2.0" />
+            <Pane layoutX="-1.0" layoutY="-1.0" opacity="0.7" prefHeight="127.0" prefWidth="1159.0" style="-fx-background-color: black;" />
+            <ImageView fitHeight="104.0" fitWidth="96.0" layoutX="37.0" layoutY="19.0" preserveRatio="true">
+               <image>
+                  <Image url="@../gui/resources/BiteMeLogo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ContactUsButton" layoutX="1033.0" layoutY="67.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: #F9975D;" text="Contact Us">
+               <effect>
+                  <DropShadow color="#0000007f" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="AboutUsButton" layoutX="906.0" layoutY="67.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: #F9975D;" text="About Us">
+               <effect>
+                  <DropShadow color="#0000007f" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>

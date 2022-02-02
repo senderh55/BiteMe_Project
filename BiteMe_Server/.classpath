@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libServer/itextpdf-5.5.13.2.jar"/>
+	<classpathentry kind="lib" path="libServer/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BiteMe_Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BiteMe_OCSF"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx"/>
+	<classpathentry kind="lib" path="JFreeChart/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="JFreeChart/jfreechart-1.0.19-experimental.jar"/>
+	<classpathentry kind="lib" path="JFreeChart/jfreechart-1.0.19-swt.jar"/>
+	<classpathentry kind="lib" path="JFreeChart/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="JFreeChart/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="JFreeChart/jfreesvg-2.0.jar"/>
+	<classpathentry kind="lib" path="JFreeChart/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="JFreeChart/orsoncharts-1.4-eval-nofx.jar"/>
+	<classpathentry kind="lib" path="JFreeChart/orsonpdf-1.6-eval.jar"/>
+	<classpathentry kind="lib" path="JFreeChart/servlet.jar"/>
+	<classpathentry kind="lib" path="JFreeChart/swtgraphics2d.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

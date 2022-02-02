@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="0.0" prefWidth="1122.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newOrder.ChooseDishForm">
+  <children>
+      <AnchorPane prefHeight="738.0" prefWidth="1159.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane>
+               <children>
+                  <ImageView fitHeight="725.0" fitWidth="1159.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../gui/resources/mainBG.jpg" />
+                     </image>
+                  </ImageView>
+                  <Pane opacity="0.7" prefHeight="127.0" prefWidth="1159.0" style="-fx-background-color: black;" />
+                  <ImageView fitHeight="104.0" fitWidth="96.0" layoutX="37.0" layoutY="19.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../gui/resources/BiteMeLogo.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="1033.0" layoutY="67.0" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: #F9975D;" text="Log Out">
+                     <effect>
+                        <DropShadow color="#0000007f" />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="906.0" layoutY="67.0" mnemonicParsing="false" onAction="#openHomePage" prefHeight="42.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: #F9975D;" text="Home Page">
+                     <effect>
+                        <DropShadow color="#0000007f" />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="515.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BiteMe - Project Co" />
+                  <Pane layoutX="31.0" layoutY="166.0" prefHeight="517.0" prefWidth="914.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Button fx:id="backButton" layoutX="22.0" layoutY="470.0" mnemonicParsing="false" onAction="#backWindow" prefHeight="33.0" prefWidth="74.0" style="-fx-background-radius: 10; -fx-background-color: #F9975D;" text="Back">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Pane fx:id="restDetailsPane" layoutX="7.0" layoutY="234.0" prefHeight="58.0" prefWidth="138.0" style="-fx-background-color: #F9975D; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="restNameText" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rest Name" textAlignment="CENTER" wrappingWidth="111.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <TabPane fx:id="menuTabPane" layoutX="157.0" layoutY="26.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="736.0" side="LEFT" style="-fx-background-color: -fx-outer-border, -fx-text-box-border, white; -fx-border-color: coral; -fx-border-width: 2;" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="200.0" tabMaxWidth="100.0" tabMinHeight="50.0" tabMinWidth="55.0">
+                           <tabs>
+                              <Tab fx:id="appetizerTab" style="-fx-rotate: 90; -fx-padding: 5; -fx-background-insets: 2 -1 -1 -1; -fx-border-width: 1 0 1 1; -fx-border-color: white; -fx-background-color: white; -fx-spacing: 0;" text="Appetizer">
+                                <content>
+                                  <AnchorPane fx:id="at_MainAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="635.0">
+                                       <children>
+                                          <ScrollPane fx:id="at_scrollPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="429.0" prefWidth="660.0" style="-fx-background-color: white; -fx-hbar-policy: NEVER; -fx-vbar-policy: NEVER;">
+                                            <content>
+                                              <AnchorPane fx:id="at_anchorPane" maxWidth="-Infinity">
+                                                   <children>
+                                                      <VBox fx:id="appetizerTab_vbox" maxWidth="-Infinity" prefWidth="660.0" style="-fx-background-color: white; -fx-spacing: 15; -fx-padding: 10;" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="100.0" />
+                                                   </padding>
+                                                </AnchorPane>
+                                            </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab fx:id="saladTab" style="-fx-rotate: 90; -fx-padding: 5; -fx-background-insets: 2 -1 -1 -1; -fx-border-width: 1 0 1 1; -fx-border-color: white; -fx-background-color: white; -fx-spacing: 0;" text="Salad">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="635.0">
+                                       <children>
+                                          <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="429.0" prefWidth="660.0" style="-fx-background-color: white; -fx-hbar-policy: NEVER; -fx-vbar-policy: NEVER;">
+                                             <content>
+                                                <AnchorPane maxWidth="-Infinity">
+                                                   <children>
+                                                      <VBox fx:id="saladTab_vbox" prefWidth="660.0" style="-fx-background-color: white; -fx-spacing: 15; -fx-padding: 10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="soupTab" style="-fx-rotate: 90; -fx-padding: 5; -fx-background-insets: 2 -1 -1 -1; -fx-border-width: 1 0 1 1; -fx-border-color: white; -fx-background-color: white; -fx-spacing: 0;" text="Soup">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="635.0">
+                                       <children>
+                                          <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="429.0" prefWidth="660.0" style="-fx-background-color: white; -fx-hbar-policy: NEVER; -fx-vbar-policy: NEVER;">
+                                             <content>
+                                                <AnchorPane maxWidth="-Infinity">
+                                                   <children>
+                                                      <VBox fx:id="soupTab_vbox" prefWidth="660.0" style="-fx-background-color: white; -fx-spacing: 15; -fx-padding: 10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="mainTab" style="-fx-rotate: 90; -fx-padding: 5; -fx-background-insets: 2 -1 -1 -1; -fx-border-width: 1 0 1 1; -fx-border-color: white; -fx-background-color: white; -fx-spacing: 0;" text="Main">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="635.0">
+                                       <children>
+                                          <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="429.0" prefWidth="660.0" style="-fx-background-color: white; -fx-hbar-policy: NEVER; -fx-vbar-policy: NEVER;">
+                                             <content>
+                                                <AnchorPane maxWidth="-Infinity">
+                                                   <children>
+                                                      <VBox fx:id="mainTab_vbox" prefWidth="660.0" style="-fx-background-color: white; -fx-spacing: 15; -fx-padding: 10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="dessertTab" style="-fx-rotate: 90; -fx-padding: 5; -fx-background-insets: 2 -1 -1 -1; -fx-border-width: 1 0 1 1; -fx-border-color: white; -fx-background-color: white; -fx-spacing: 0;" text="Dessert">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="635.0">
+                                       <children>
+                                          <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="429.0" prefWidth="660.0" style="-fx-background-color: white; -fx-hbar-policy: NEVER; -fx-vbar-policy: NEVER;">
+                                             <content>
+                                                <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="429.0">
+                                                   <children>
+                                                      <VBox fx:id="dessertTab_vbox" prefWidth="660.0" style="-fx-background-color: white; -fx-spacing: 15; -fx-padding: 10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="drinksTab" style="-fx-rotate: 90; -fx-padding: 5; -fx-background-insets: 2 -1 -1 -1; -fx-border-width: 1 0 1 1; -fx-border-color: white; -fx-background-color: white; -fx-spacing: 0;" text="Drinks">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="635.0">
+                                       <children>
+                                          <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="429.0" prefWidth="660.0" style="-fx-background-color: white; -fx-hbar-policy: NEVER; -fx-vbar-policy: NEVER;">
+                                             <content>
+                                                <AnchorPane prefWidth="660.0">
+                                                   <children>
+                                                      <VBox fx:id="drinkTab_vbox" prefWidth="660.0" style="-fx-background-color: white; -fx-spacing: 15; -fx-padding: 10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                        <Button fx:id="summaryButton" layoutX="815.0" layoutY="470.0" mnemonicParsing="false" onAction="#summaryWindow" prefHeight="33.0" prefWidth="89.0" style="-fx-background-radius: 10; -fx-background-color: #F9975D;" text="Summary">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="addNewDishToMenuButton" layoutX="456.0" layoutY="470.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="138.0" style="-fx-background-radius: 10; -fx-background-color: #F9975D;" text="Add New Dish">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <AnchorPane fx:id="orderStageAnchorPane" layoutX="969.0" layoutY="166.0" prefHeight="517.0" prefWidth="158.0" style="-fx-background-color: #F9975D; -fx-background-radius: 10;">
+                     <children>
+                        <Pane layoutX="24.0" layoutY="437.0" prefHeight="58.0" prefWidth="111.0" style="-fx-background-color: PEACHPUFF; -fx-border-color: coral;">
+                           <children>
+                              <TextField fx:id="totalTextField" editable="false" layoutX="7.0" layoutY="7.0" prefHeight="44.0" prefWidth="97.0" text="Total: 134.00">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Text fx:id="identStageText" fill="#806a6a" layoutX="24.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identification">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="orderTypeStageText" fill="#806a6a" layoutX="32.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order type">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="restStageText" fill="#806a6a" layoutX="32.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="dishesStageText" fill="WHITE" layoutX="50.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dishes">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="summaryStageText" fill="#806a6a" layoutX="39.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Summary">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="paymentStageText" fill="#806a6a" layoutX="40.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="confirmStageText" fill="#806a6a" layoutX="21.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="addedDishStatusLabel" layoutX="16.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="123.0" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>

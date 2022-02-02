@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="701.0" prefWidth="1122.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="branchManager.BranchManRestaurantsForm">
+  <children>
+      <AnchorPane prefHeight="547.0" prefWidth="1122.0">
+         <children>
+            <ImageView fitHeight="725.0" fitWidth="1158.0">
+               <image>
+                  <Image url="@../gui/resources/mainBG.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="59.0" layoutY="166.0" prefHeight="517.0" prefWidth="1039.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text fx:id="personalWelcomeLabel" layoutX="409.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Restaurant">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="backButton" layoutX="18.0" layoutY="446.0" mnemonicParsing="false" onAction="#backWindow" prefHeight="42.0" prefWidth="87.0" style="-fx-background-radius: 10; -fx-background-color: #F9975D;" text="Back">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="registerButton" layoutX="474.0" layoutY="446.0" mnemonicParsing="false" onAction="#registerNewRestaurant" prefHeight="42.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: DARKSEAGREEN;" text="Register">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="158.0" layoutY="159.0" prefHeight="35.0" prefWidth="129.0" text="Restaurant Name">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+                  <Label layoutX="158.0" layoutY="238.0" prefHeight="35.0" prefWidth="110.0" text="Branch">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+                  <Label layoutX="579.0" layoutY="159.0" prefHeight="35.0" prefWidth="67.0" text="Phone">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="572.0" layoutY="238.0" prefHeight="35.0" prefWidth="96.0" text="Description">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameTextField" layoutX="296.0" layoutY="161.0" />
+                  <TextField fx:id="branchTextField" layoutX="296.0" layoutY="243.0" />
+                  <TextField fx:id="phoneTextField" layoutX="695.0" layoutY="159.0" />
+                  <TextField fx:id="descriptionTextField" layoutX="695.0" layoutY="241.0" prefHeight="31.0" prefWidth="277.0" />
+                  <Label layoutX="158.0" layoutY="314.0" prefHeight="35.0" prefWidth="110.0" text="Address">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="addressTextField" layoutX="296.0" layoutY="319.0" />
+                  <Label fx:id="successLabel" layoutX="757.0" layoutY="446.0" prefHeight="42.0" prefWidth="180.0" text="Registration completed!" textFill="#10a100" />
+                  <Label layoutX="572.0" layoutY="318.0" prefHeight="35.0" prefWidth="129.0" text="User Name">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userNameTextField" layoutX="700.0" layoutY="320.0" />
+               </children>
+            </Pane>
+            <Text layoutX="515.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BiteMe - Project Co" />
+            <Pane layoutX="-1.0" opacity="0.7" prefHeight="127.0" prefWidth="1159.0" style="-fx-background-color: black;" />
+            <ImageView fitHeight="94.0" fitWidth="96.0" layoutX="37.0" layoutY="19.0">
+               <image>
+                  <Image url="@../gui/resources/BiteMeLogo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="logoutButton" layoutX="1033.0" layoutY="67.0" mnemonicParsing="false" onAction="#logoutOfAccount" prefHeight="42.0" prefWidth="110.0" style="-fx-background-radius: 7; -fx-background-color: #F9975D;" text="Log Out">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="HomePageButton" layoutX="906.0" layoutY="67.0" mnemonicParsing="false" onAction="#openHomePage" prefHeight="42.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: #F9975D;" text="Home Page">
+               <effect>
+                  <DropShadow color="#0000007f" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>
